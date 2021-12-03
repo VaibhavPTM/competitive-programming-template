@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long int
-vector<ll> primeFactors(ll n, vector<ll> &p) {
+vector<ll> primeFactors(ll n) {
+    vector<ll> p
     while (n % 2 == 0) {
         p.push_back(2);
         n = n/2;
@@ -13,7 +14,8 @@ vector<ll> primeFactors(ll n, vector<ll> &p) {
         }
     }
     if (n > 2) p.push_back(n);
-    cout << p.size() << endl;
+//     cout << p.size() << endl;
+    return p;
 }
  
 int main() {
