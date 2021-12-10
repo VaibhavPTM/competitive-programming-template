@@ -14,13 +14,13 @@ using namespace std;
 #define ff first
 #define ss second
 #define pi pair<int,int>
-int M = 998244353;
+int MOD = 998244353;
 int fmpower(int a,int n) {
     int p=1;
     while(n>0) {
         if(n&1)
-            p=((p%M)*(a%M))%M;
-        a=((a%M)*(a%M))%M;
+            p=((p%MOD)*(a%MOD))%MOD;
+        a=((a%MOD)*(a%MOD))%MOD;
         n=n>>1;
     }
     return p;
@@ -38,8 +38,8 @@ int32_t main() {
         fi = fi/__gcd(fi,ans);
         int y = ans/__gcd(ans,fi);
         fi = fi/__gcd(fi,ans);
-        ans = (y%M*x%M)%M;
-        ans = (ans%M*fmpower(fi,M-2))%M;
+        ans = (y%MOD*x%MOD)%MOD;
+        ans = (ans%MOD*fmpower(fi,MOD-2))%MOD;
         cout<<ans<<endl;
     }
     return 0;
