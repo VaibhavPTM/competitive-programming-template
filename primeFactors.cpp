@@ -2,7 +2,7 @@
 using namespace std;
 #define ll long long int
 vector<ll> primeFactors(ll n) {
-    vector<ll> p
+    vector<ll> p;
     while (n % 2 == 0) {
         p.push_back(2);
         n = n/2;
