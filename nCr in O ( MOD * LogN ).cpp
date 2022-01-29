@@ -1,4 +1,5 @@
-  int mod = 1000003;
+class nCr {
+    int mod = 1000003;
     vector<int> fac;
     vector<int> fac_inv;
     int power(int n, int m) {
@@ -26,3 +27,20 @@
         int ni = n % mod, ri = r % mod;
         return (lucas(n/mod,r/mod) * fermat(ni,ri)) % mod;
     }
+public:
+    nCr() {
+        fac.resize(mod);
+        fac_inv.resize(mod);
+
+        fac[0] = 1;
+        for(int i=1; i<mod; i++)
+            fac[i] = (1LL * fac[i-1] * i)%mod;
+
+        fac_inv[mod-1] = power(fac[mod-1], mod-2); // mod inverse
+        for(int i=mod-2; i>0; i--)
+            fac_inv[i] = (1LL * fac_inv[i+1] * (i+1))%mod;
+    }
+    int get_nCr(long long n, long long r) {
+        return lucas(n, r);
+    }
+};
