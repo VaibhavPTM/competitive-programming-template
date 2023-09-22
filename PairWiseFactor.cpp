@@ -1,5 +1,5 @@
-vec(p(int,int)) factor(int n) {
-    vec(p(int,int)) ar;
+v(p(int,int)) factor(int n) {
+    v(p(int,int)) ar;
     ar.pb({1, n});
     for(int i = 2; i * i <= n; i++) {
         if(n % i == 0) {
