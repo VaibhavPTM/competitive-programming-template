@@ -52,10 +52,12 @@ template <typename A>
 void print (v(A) &ar) { for(A &i : ar)  cout << i << " "; cout << endl; }
 template <typename A>
 void print (set<A> &ar) { for(auto &i : ar)  cout << i << " "; cout << endl; }
-template <typename A>
+template <typename T>
 void print(T t) { cout << t << '\n' ;}
 template<typename T, typename... Args>
 void print(T t, Args... args) {cout << t << " "; print(args...) ;}
+
+template <typename A>
 void sin (v(A) &ar) { for(A &i : ar)  cin >> i; }
 template <typename T>
 void sin(v(v(T)) &ar) { for(int i = 0; i < ar.size(); i++) { for(int j = 0; j < ar[i].size(); j++){ cin >> ar[i][j]; } } }
@@ -80,8 +82,9 @@ v(int) yy = {1,-1,1,-1,-1,1,0,0};
 v(int) xs = {0,0,1,-1};
 v(int) ys = {1,-1,0,0};
 
-void solve() {
 
+void solve() {
+    
 }
     
 int32_t main() {
