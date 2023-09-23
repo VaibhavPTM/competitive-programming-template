@@ -53,15 +53,16 @@ void print (v(A) &ar) { for(A &i : ar)  cout << i << " "; cout << endl; }
 template <typename A>
 void print (set<A> &ar) { for(auto &i : ar)  cout << i << " "; cout << endl; }
 template <typename A>
+void print(T t) { cout << t << '\n' ;}
+template<typename T, typename... Args>
+void print(T t, Args... args) {cout << t << " "; print(args...) ;}
 void sin (v(A) &ar) { for(A &i : ar)  cin >> i; }
 template <typename T>
 void sin(v(v(T)) &ar) { for(int i = 0; i < ar.size(); i++) { for(int j = 0; j < ar[i].size(); j++){ cin >> ar[i][j]; } } }
 template <typename A, typename B>
 void sin (v(p(A,B)) &ar) { for(auto &i : ar) { cin >> i.ff >> i.ss; } }
 template <typename T>
-void dbg(T t) { cout << t << '\n' ;}
-template<typename T, typename... Args>
-void dbg(T t, Args... args) {cout << t << " "; dbg(args...) ;}
+
 
 
 bool prime(ll n) {if(n == 1) return false; for(int i = 2; i * i <= n; i++) if(n % i == 0) return false;return true;}
@@ -80,10 +81,7 @@ v(int) xs = {0,0,1,-1};
 v(int) ys = {1,-1,0,0};
 
 void solve() {
-    s1(int, n);
-    v(p(int,int)) ar(n);
-    sin(ar);
-    print(ar);
+
 }
     
 int32_t main() {
