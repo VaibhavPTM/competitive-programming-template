@@ -7,36 +7,41 @@
 // #define i256      int256_t
 // #define i128      int128_t
 // #define i1024     int1024_t
-
-using namespace std;
-#define int      long long
-#define ll       long long
-#define TEST     int t = 1; cin >> t; while(t--) solve();
-#define p(A,B)   pair<A,B>
-#define pb       push_back
-#define all(v)   v.begin(), v.end()
-#define allr(v)  v.rbegin(), v.rend()
-#define v(T)   vector<T>
-#define vv(T)    vector<vector<T> >
-#define maxhp(T) priority_queue<T>
-#define minhp(T) priority_queue<T, vector<T> , greater<T> >
-#define ff       first
-#define ss       second
-#define yes      cout << "YES" << endl;
-#define no       cout << "NO" << endl;
-#define ps(x,y)  fixed<<setprecision(y)<<x
-#define mem(n,i) memset(n, i,sizeof n)
-#define Case(i) cout << "Case #" << i << ": "
-#define endl     "\n"
-#define p0(x)           cout<<(x)<<" "
-#define s1(A,a)           A a; cin >> a
-#define s2(A,a,b)         A a, b; cin >> a >> b
-#define s3(A,a,b,c)       A a, b, c; cin >> a >> b >> c
-#define s4(A,a,b,c,d)     A a, b, c, d; cin >> a >> b >> c >> d
-#define s5(A,a,b,c,d,e)   A a, b, c, d, e; cin >> a >> b >> c >> d >> e
-#define s6(A,a,b,c,d,e,f) A a, b, c, d, e, f; cin >> a >> b >> c >> d >> e>> f
-#define loop(i_itr, k, n) for(int i_itr = k; i_itr <= n; i_itr++)
-#define looprev(i_itr,n,a) for(ll i_itr=n; i_itr>=a; i_itr--)
+        
+using namespace std;        
+#define int                     long long
+#define ll                      long long
+#define TEST                    int t = 1; cin >> t; while(t--) solve();
+#define p(A,B)                  pair<A,B>
+#define pb                      push_back
+#define all(v)                  v.begin(), v.end()
+#define allr(v)                 v.rbegin(), v.rend()
+#define v(T)                    vector<T> 
+#define vi                      vector<int> 
+#define vs                      vector<string > 
+#define vvi                     vector<vector<int> > 
+#define vvs                     vector<vector<string> > 
+#define vpi                     vector<pair<int,int> > 
+#define vv(T)                   vector<vector<T> >
+#define maxhp(T)                priority_queue<T>
+#define minhp(T)                priority_queue<T, vector<T> , greater<T> >
+#define ff                      first
+#define ss                      second
+#define yes                     cout << "YES" << endl;
+#define no                      cout << "NO" << endl;
+#define ps(x,y)                 fixed<<setprecision(y)<<x
+#define mem(n,i)                memset(n, i,sizeof n)
+#define Case(i)                 cout << "Case #" << i << ": "
+#define endl                    "\n"
+#define p0(x)                   cout<<(x)<<" "
+#define s1(A,a)                 A a; cin >> a
+#define s2(A,a,b)               A a, b; cin >> a >> b
+#define s3(A,a,b,c)             A a, b, c; cin >> a >> b >> c
+#define s4(A,a,b,c,d)           A a, b, c, d; cin >> a >> b >> c >> d
+#define s5(A,a,b,c,d,e)         A a, b, c, d, e; cin >> a >> b >> c >> d >> e
+#define s6(A,a,b,c,d,e,f)       A a, b, c, d, e, f; cin >> a >> b >> c >> d >> e>> f
+#define loop(i_itr, k, n)       for(int i_itr = k; i_itr <= n; i_itr++)
+#define looprev(i_itr,n,a)      for(ll i_itr=n; i_itr>=a; i_itr--)
 const ll INF = 1e18;
 const ll MOD = 1e9 + 7;
 const ll mod = 998244353;
