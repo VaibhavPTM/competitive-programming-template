@@ -42,9 +42,7 @@ using namespace std;
 #define s6(A,a,b,c,d,e,f)       A a, b, c, d, e, f; cin >> a >> b >> c >> d >> e>> f
 #define loop(i_itr, k, n)       for(int i_itr = k; i_itr <= n; i_itr++)
 #define looprev(i_itr,n,a)      for(ll i_itr=n; i_itr>=a; i_itr--)
-const ll INF = 1e18;
-const ll MOD = 1e9 + 7;
-const ll mod = 998244353;
+
 
 
 template <typename A, typename B>
@@ -70,7 +68,9 @@ template <typename A, typename B>
 void sin (v(p(A,B)) &ar) { for(auto &i : ar) { cin >> i.ff >> i.ss; } }
 template <typename T>
 
-
+const ll INF = 1e18;
+const ll MOD = 1e9 + 7;
+const ll mod = 998244353;
 
 bool prime(ll n) {if(n == 1) return false; for(int i = 2; i * i <= n; i++) if(n % i == 0) return false;return true;}
 ll POW (ll a, ll p, ll m) { ll res = 1; while (p > 0) { if(p % 2 == 0){ p /= 2; a = ((a%m)*(a%m))%m;} else{ res = ((res%m)*(a%m))%m; p--; }}return res;}
