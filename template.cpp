@@ -2,13 +2,16 @@
 #include<bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp> 
 #include <ext/pb_ds/tree_policy.hpp> 
+#ifndef ONLINE_JUDGE 
+    #include "debug.hpp"
+#endif
+
 // #include<boost/multiprecision/cpp_int.hpp>
 // using namespace boost::multiprecision;
 // #define i512      int512_t
 // #define i256      int256_t
 // #define i128      int128_t
 // #define i1024     int1024_t
-
 using namespace __gnu_pbds; 
 using namespace std;        
 
@@ -57,6 +60,8 @@ template <typename A>
 void print (v(A) &ar) { for(A &i : ar)  cout << i << " "; cout << endl; }
 template <typename A>
 void print (set<A> &ar) { for(auto &i : ar)  cout << i << " "; cout << endl; }
+template <typename A>
+void print (multiset<A> &ar) { for(auto &i : ar)  cout << i << " "; cout << endl; }
 template <typename T>
 void print(T t) { cout << t << '\n' ;}
 template<typename T, typename... Args>
@@ -95,7 +100,7 @@ v(int) ys = {1,-1,0,0};
 void sieve();
 
 void solve() {
-
+    
 }
     
 int32_t main() {
