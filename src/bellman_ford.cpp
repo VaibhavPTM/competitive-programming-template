@@ -73,3 +73,65 @@ int main(){
         }
 	}
 }
+
+// my bellman ford
+struct edges {
+    int u;
+    int v;
+    long long w;
+    edges(int uu, int vv, long long ww) {
+        u = uu;
+        v = vv;
+        w = ww;
+    }
+};
+void solve() {
+    int n, m;
+    cin >> n >> m;
+    vector<edges> edge;
+    for(int i = 0; i < m; i++) {
+        int a, b, c;
+        cin >> a >> b >> c;
+        a--, b--;
+        edge.push_back(edges(a, b, c));
+    }
+    vi parent(n+1);
+    vi dist(n+1);
+    for (int i = 0; i < n; i++) {
+        parent[i] = 0;
+        dist[i] = INF;
+    }
+
+    dist[0] = 0;
+    int x = 0;
+    for (int i = 0; i < n; i++) {
+        x = -1;
+        for (int j = 0; j < edge.size(); j++) {
+            int u = edge[j].u;
+            int v = edge[j].v;
+            long long w = edge[j].w;
+            if (dist[v] > dist[u] + w){
+                dist[v] = dist[u] + w;
+                parent[v] = u;
+                x = v;
+            }
+        }
+    }
+    if(x != -1) {
+        for(int i = 0; i < n; i++) {
+            x = parent[x];
+        }
+        vector<int> res;
+        for(int i = x, j = 0; j++ < n+10 ; i = parent[i]) {
+            res.pb(i);
+            if(i == x && res.size() > 1) break;
+        }
+        yes;
+        reverse(all(res));
+        for(int &i : res) i++;
+        print(res);
+    }
+    else {
+        no;
+    }
+}
